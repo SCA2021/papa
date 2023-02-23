@@ -17,3 +17,12 @@
     <input type="text" name="ejsFormName3" value="something3"> 
     <input type="submit">
   </form>
+
+  
+  <h3> Current Drinkz on hand</h3> 
+  <% for (var i=0; i< drinkData.length; i++ ) { %>
+   <form method="POST" action="/del/<%= drinkData[i]._id %>" style="display: inline-block">  
+     <%= drinkData[i].drink_name %> (<%= drinkData[i].size %>) 
+   </form>
+   <br/>
+ <% } %> 

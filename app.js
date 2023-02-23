@@ -38,11 +38,13 @@ async function cxnDB(){
 }
 
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
 
-  //res.send('Hello world! This is Sam! <br/> <a href="mongo">mongo</a>');
+  let result = await cxnDB().catch(console.error); 
 
-  res.render('index');
+  // console.log("get/: ", result);
+
+  res.render('index', {  drinkData : result })
 })
 
 app.get('/mongo', async (req, res) => {
@@ -67,6 +69,8 @@ app.get('/update', async (req, res) => {
       drink_name: myName
     });
 })
+
+
 
 app.get('/up', async (req, res) => {
 
