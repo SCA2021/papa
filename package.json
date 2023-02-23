@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "body": "^5.1.0",
     "body-parser": "^1.20.1",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
@@ -7,7 +8,8 @@
     "mongodb": "^5.0.1",
     "nodemo": "^1.0.0",
     "nodemon": "^2.0.20",
-    "nodmeon": "^0.0.1-security"
+    "nodmeon": "^0.0.1-security",
+    "parser": "^0.1.4"
   },
   "scripts": {
     "dev": "nodemon run app.js",
