@@ -64,33 +64,34 @@ app.get('/update', async (req, res) => {
     client.connect; 
     const collection = client.db("chillAppz").collection("drinkz");
     await collection.insertOne({
-      drink_name: 'cold ones'
+      drink_name: myName
     });
 })
 
 app.get('/up', async (req, res) => {
 
     // want to get data from the form
-    console.log("in get to slash update:", req.query.ejsFormName); 
-    myName = req.query.ejsFormName; 
+    console.log("in get to slash update:", req.query.ejsFormName2); 
+    myName = req.query.ejsFormName2;
+    myName2 = req.query.ejsFormName22;
     // update into the db
     client.connect; 
     const collection = client.db("chillAppz").collection("drinkz");
     await collection.updateOne(
-      {drink_name: 'cold ones'},
-      {$set :{drink_name:"warm ones"}}
+      {drink_name: myName},
+      {$set :{drink_name:myName2}}
     );
 })
 app.get('/del', async (req, res) => {
 
   // want to get data from the form
-  console.log("in get to slash update:", req.query.ejsFormName); 
-  myName = req.query.ejsFormName; 
+  console.log("in get to slash update:", req.query.ejsFormName3); 
+  myName = req.query.ejsFormName3; 
   // update into the db
   client.connect; 
   const collection = client.db("chillAppz").collection("drinkz");
   await collection.deleteOne(
-    {drink_name: 'cold ones'}
+    {drink_name: myName}
   );
 })
 
