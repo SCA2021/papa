@@ -7,5 +7,28 @@
     "mongodb": "^5.1.0",
     "node": "^19.6.0",
     "nodemon": "^2.0.20"
-  }
+  },
+  "name": "papa",
+  "description": "",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node" : ">18",
+    "npm" : ">8"
+  }, 
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/barrycumbie/papa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/barrycumbie/papa/issues"
+  },
+  "homepage": "https://github.com/barrycumbie/papa#readme"
 }
