@@ -65,9 +65,13 @@ app.get('/update', async (req, res) => {
     // update into the db
     client.connect; 
     const collection = client.db("chillAppz").collection("drinkz");
-    await collection.insertOne({
+    let result = await collection.insertOne({
       drink_name: myName
-    });
+    }).then(result => {
+      console.log(result);
+      res.redirect('/');
+
+    })
 })
 
 
@@ -81,10 +85,14 @@ app.get('/up', async (req, res) => {
     // update into the db
     client.connect; 
     const collection = client.db("chillAppz").collection("drinkz");
-    await collection.updateOne(
+    let result = await collection.updateOne(
       {drink_name: myName},
       {$set :{drink_name:myName2}}
-    );
+    ).then(result => {
+      console.log(result);
+      res.redirect('/');
+
+    })
 })
 app.get('/del', async (req, res) => {
 
@@ -94,9 +102,13 @@ app.get('/del', async (req, res) => {
   // update into the db
   client.connect; 
   const collection = client.db("chillAppz").collection("drinkz");
-  await collection.deleteOne(
+  let result = await collection.deleteOne(
     {drink_name: myName}
-  );
+    ).then(result => {
+      console.log(result);
+      res.redirect('/');
+
+    })
 })
 
 console.log('in the node console');
